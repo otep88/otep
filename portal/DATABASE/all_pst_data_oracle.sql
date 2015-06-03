@@ -127,6 +127,11 @@ insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('web-000021','/cop/bbs/anonymous/.*.do.*',	'/cop/bbs/anonymous/*.do', '익명게시판', 'url', '100',SYSDATE);
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('web-000022','/validator.do',	'/validator.do', '익명게시판(validate)', 'url', '101',SYSDATE);
 
+insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('sym-ccm-cca','sym-ccm-cca','/sym/ccm/cca/.*.do.*','공통코드 등록','url','8',SYSDATE);
+insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('sym-ccm-ccc','sym-ccm-ccc','/sym/ccm/ccc/.*.do.*','공통분류코드 상세조회','url','9',SYSDATE);
+insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('sym-ccm-cde','sym-ccm-cde','/sym/ccm/cde/.*.do.*','공통상세코드 등록','url','10',SYSDATE);
+
+
 --익명게시판
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-umt-mber','uss-umt-mber','/uss/umt/mber/.*.do.*','일반회원관리','url','22',SYSDATE);
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-umt-mber','uss-umt-mber','/uss/umt/mber/.*.do.*','일반회원관리','url','22',SYSDATE);
@@ -310,6 +315,23 @@ insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PRO
 insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('listNoteTrnsmit','/uss/ion/nts/','보낸쪽지함관리','보낸쪽지함관리','/uss/ion/nts/listNoteTrnsmit.do');
 insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('registEgovNoteManage','/uss/ion/ntm/','쪽지관리','쪽지관리','/uss/ion/ntm/registEgovNoteManage.do');
 insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('listPopup','/uss/ion/pwm/','팝업창관리','팝업창관리','/uss/ion/pwm/listPopup.do');
+
+
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnClCodeDetail','/sym/ccm/ccc/','공통분류코드 상세조회','공통분류코드 상세조회','/sym/ccm/ccc/EgovCcmCmmnClCodeDetail.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnClCodeList','/sym/ccm/ccc/','공통분류코드목록 조회','공통분류코드목록 조회','/sym/ccm/ccc/EgovCcmCmmnClCodeList.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnClCodeModify','/sym/ccm/ccc/','공통분류코드 수정','공통분류코드 수정','/sym/ccm/ccc/EgovCcmCmmnClCodeModify.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnClCodeRegist','/sym/ccm/ccc/','공통분류코드 등록','공통분류코드 등록','/sym/ccm/ccc/EgovCcmCmmnClCodeRegist.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnCodeDetail','/sym/ccm/cca/','공통코드 상세조회','공통코드 상세조회','/sym/ccm/cca/EgovCcmCmmnCodeDetail.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnCodeList','/sym/ccm/cca/','공통코드목록 조회','공통코드목록 조회','/sym/ccm/cca/EgovCcmCmmnCodeList.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnCodeModify','/sym/ccm/cca/','공통코드 수정','공통코드 수정','/sym/ccm/cca/EgovCcmCmmnCodeModify.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnCodeRegist','/sym/ccm/cca/','공통코드 등록','공통코드 등록','/sym/ccm/cca/EgovCcmCmmnCodeRegist.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnDetailCodeDetail','/sym/ccm/cde/','공통상세코드 상세조회','공통상세코드 상세조회','/sym/ccm/cde/EgovCcmCmmnDetailCodeDetail.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnDetailCodeList','/sym/ccm/cde/','공통상세코드목록 조회','공통상세코드목록 조회','/sym/ccm/cde/EgovCcmCmmnDetailCodeList.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnDetailCodeModify','/sym/ccm/cde/','공통상세코드 수정','공통상세코드 수정','/sym/ccm/cde/EgovCcmCmmnDetailCodeModify.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovCcmCmmnDetailCodeRegist','/sym/ccm/cde/','공통상세코드 등록','공통상세코드 등록','/sym/ccm/cde/EgovCcmCmmnDetailCodeRegist.do');
+
+
+
 -- 메뉴목록
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('root','dir',0,0,1,'root','/','/');
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('사이트소개','dir',1000000,0,1,'사이트소개','/','/');
@@ -364,6 +386,10 @@ insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('메뉴생성관리','EgovMenuCreatManageSelect',6150000,6000000,15,'메뉴생성관리','/','/');
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('팝업창관리','listPopup',5340000,5000000,34,'팝업창관리','/','/');
 
+insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('코드관리','dir',6040000,6000000,4,'코드관리','/','/');
+insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('분류코드관리','EgovCcmCmmnClCodeList',6040100,6040000,1,'분류코드관리','/','/');
+insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('공통코드관리','EgovCcmCmmnCodeList',6040200,6040000,2,'공통코드관리','/','/');
+insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('상세코드관리','EgovCcmCmmnDetailCodeList',6040300,6040000,3,'상세코드관리','','');
 
 -- 메뉴생성목록
 insert into LETTNMENUCREATDTLS(MENU_NO,AUTHOR_CODE,MAPNG_CREAT_ID) values (0,'ROLE_ADMIN',null);

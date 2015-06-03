@@ -29,18 +29,28 @@
         hash="plaintext"
 
     />
+	<!-- 
+	
+	roleHierarchyString  계층처리를 위한 설정 문자열 지정 미지정시 DB로부터 지정된 설정정보 (sqlHierarchicalRoles)!사용
+    sqlHierarchicalRoles 계층처리를 위한!query! 선택
+	sqlRolesAndUrl URL!방식!role!지정!query! 선택
+	sqlRolesAndMethod method!방식!role!지정!query! 선택
+	sqlRolesAndPointcut pointcut 방식!role!지정!query! 선택
+	sqlRegexMatched RequestMapping request 마다 best matching url 보호자원 지정 선택
+	
+	 -->
 
-    <egov-security:initializer id="initializer"
-        supportPointcut="false"
-    />
-
-    <egov-security:secured-object-config id="securedObjectConfig"
+    <egov-security:initializer id="initializer"   supportPointcut="false" />
+    
+    <!-- 
        sqlRolesAndUrl="SELECT a.ROLE_PTTRN url, b.AUTHOR_CODE authority FROM LETTNROLEINFO a, LETTNAUTHORROLERELATE b  WHERE a.ROLE_CODE = b.ROLE_CODE AND a.ROLE_TY = 'url'  ORDER BY a.ROLE_SORT"
+       
+        -->
+    <egov-security:secured-object-config id="securedObjectConfig"
        sqlRolesAndMethod="SELECT a.ROLE_PTTRN &quot;method&quot;, b.AUTHOR_CODE authority FROM LETTNROLEINFO a, LETTNAUTHORROLERELATE b WHERE a.ROLE_CODE = b.ROLE_CODE AND a.ROLE_TY = 'method'  ORDER BY a.ROLE_SORT"
        sqlRolesAndPointcut="SELECT a.ROLE_PTTRN pointcut, b.AUTHOR_CODE authority FROM LETTNROLEINFO a, LETTNAUTHORROLERELATE b WHERE a.ROLE_CODE = b.ROLE_CODE AND a.ROLE_TY = 'pointcut'  ORDER BY a.ROLE_SORT"
 
        sqlRegexMatchedRequestMapping="SELECT a.resource_pattern uri, b.authority authority FROM LETTNSECURED_RESOURCES a, LETTNSECURED_RESOURCES_ROLE b WHERE a.resource_id = b.resource_id AND a.resource_type = 'url'"
        sqlHierarchicalRoles="SELECT a.CHLDRN_ROLE child, a.PARNTS_ROLE parent FROM LETTNROLES_HIERARCHY a LEFT JOIN LETTNROLES_HIERARCHY b on (a.CHLDRN_ROLE = b.PARNTS_ROLE)"
     />
-
 </beans>

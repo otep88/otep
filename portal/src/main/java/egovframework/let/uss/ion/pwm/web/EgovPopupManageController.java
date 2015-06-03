@@ -320,7 +320,7 @@ public class EgovPopupManageController {
                 @RequestParam("fileUrl") String fileUrl,
                 @RequestParam("stopVewAt") String stopVewAt,
                 @RequestParam("popupId") String popupId,
-                ModelMap model
+                @CommandMap ModelMap model
             ) throws Exception {
         
         model.addAttribute("stopVewAt", stopVewAt);

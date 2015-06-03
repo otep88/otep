@@ -50,6 +50,6 @@ public interface EgovNoteRecptnService {
 	 * @param noteRecptn  -받은쪽지함관리 정보 담김 객체
 	 * @throws Exception
 	 */
-	void  deleteNoteRecptn(NoteRecptn noteRecptn) throws Exception;
-	
+	public void  deleteNoteRecptn(NoteRecptn noteRecptn) throws Exception;
+
 }
