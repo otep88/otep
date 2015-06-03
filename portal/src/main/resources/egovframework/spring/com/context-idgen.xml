@@ -1049,7 +1049,7 @@
         <property name="dataSource" ref="egov.dataSource" />
         <property name="strategy"   ref="loginLogStrategy" />
         <property name="blockSize"  value="10"/>
-        <property name="table"      value="COMTECOPSEQ"/>
+        <property name="table"      value="IDS"/>
         <property name="tableName"  value="LOGINLOG_ID"/>
     </bean>
 

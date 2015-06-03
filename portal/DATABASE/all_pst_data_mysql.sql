@@ -126,6 +126,7 @@ insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-sam-stp','uss-sam-stp','/uss/sam/stp/.*.do.*','약관','url','20','2011-08-24 0:00');
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-umt-cmm','uss-umt-cmm','/uss/umt/cmm/.*.do.*','일반회원가입신청','url','21','2011-08-24 0:00');
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-umt-mber','uss-umt-mber','/uss/umt/mber/.*.do.*','일반회원관리','url','22','2011-08-24 0:00');
+
 --익명게시판
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('web-000021','/cop/bbs/anonymous/.*.do.*',	'/cop/bbs/anonymous/*.do', '익명게시판', 'url', '100','2011-08-24 0:00');
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('web-000022','/validator.do',	'/validator.do', '익명게시판(validate)', 'url', '101','2011-08-24 0:00');
@@ -143,6 +144,9 @@ insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-ion-ntr','uss-ion-ntr','/uss/ion/ntr/.*.do.*','받은쪽지함관리','url','24','2011-08-24 0:00');
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-ion-nts','uss-ion-nts','/uss/ion/nts/.*.do.*','보낸쪽지함관리','url','25','2011-08-24 0:00');
 insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('uss-ion-nts','uss-ion-nts','/uss/ion/nts/.*.do.*','보낸쪽지함관리','url','25','2011-08-24 0:00');
+
+insert into LETTNROLEINFO(ROLE_CODE,ROLE_NM,ROLE_PTTRN,ROLE_DC,ROLE_TY,ROLE_SORT,ROLE_CREAT_DE) values ('sym-log-clg','sym-log-clg','/sym/log/clg/.*.do.*','로그인로그조회','url','13','2011-08-24 0:00');
+
 
 # 권한별 롤
 insert into LETTNAUTHORROLERELATE(AUTHOR_CODE,ROLE_CODE,CREAT_DT) values ('ROLE_ADMIN','cmm-uss-umt','2009-08-25 00:00:00');
@@ -327,6 +331,9 @@ INSERT INTO LETTNPROGRMLIST(PROGRM_FILE_NM, PROGRM_STRE_PATH, PROGRM_KOREAN_NM, 
 INSERT INTO LETTNPROGRMLIST(PROGRM_FILE_NM, PROGRM_STRE_PATH, PROGRM_KOREAN_NM, PROGRM_DC, URL) VALUES ('listNoteTrnsmit','/uss/ion/nts/','보낸쪽지함관리','보낸쪽지함관리','/uss/ion/nts/listNoteTrnsmit.do');
 INSERT INTO LETTNPROGRMLIST(PROGRM_FILE_NM, PROGRM_STRE_PATH, PROGRM_KOREAN_NM, PROGRM_DC, URL) VALUES ('registEgovNoteManage','/uss/ion/ntm/','쪽지관리','쪽지관리','/uss/ion/ntm/registEgovNoteManage.do');
 INSERT INTO LETTNPROGRMLIST(PROGRM_FILE_NM, PROGRM_STRE_PATH, PROGRM_KOREAN_NM, PROGRM_DC, URL) VALUES ('listPopup','/uss/ion/pwm/','팝업창관리','팝업창관리','/uss/ion/pwm/listPopup.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovLoginLogInqire','/sym/log/clg/','로그인로그상세조회','로그인로그상세조회','/sym/log/clg/SelectLoginLogList.do');
+insert into LETTNPROGRMLIST(PROGRM_FILE_NM,PROGRM_STRE_PATH,PROGRM_KOREAN_NM,PROGRM_DC,URL) values ('EgovLoginLogList','/sym/log/clg/','로그인로그조회','로그인로그조회','/sym/log/clg/SelectLoginLogList.do');
+
 
 #메뉴목록
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('root','dir',0,0,1,'root','/','/');
@@ -385,6 +392,7 @@ insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('분류코드관리','EgovCcmCmmnClCodeList',6040100,6040000,1,'분류코드관리','/','/');
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('공통코드관리','EgovCcmCmmnCodeList',6040200,6040000,2,'공통코드관리','/','/');
 insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('상세코드관리','EgovCcmCmmnDetailCodeList',6040300,6040000,3,'상세코드관리','','');
+insert into LETTNMENUINFO(MENU_NM,PROGRM_FILE_NM,MENU_NO,UPPER_MENU_NO,MENU_ORDR,MENU_DC,RELATE_IMAGE_PATH,RELATE_IMAGE_NM) values ('접속로그관리','EgovLoginLogList',6050000,6000000,5,'접속로그관리','/','/');
 
 
 
