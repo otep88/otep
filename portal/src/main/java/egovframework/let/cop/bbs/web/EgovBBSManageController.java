@@ -259,7 +259,7 @@ public class EgovBBSManageController {
 		// 2009.06.29 : 2단계 기능 추가
 		//----------------------------
 		if (bbsCommentService.canUseComment(boardVO.getBbsId())) {
-		    model.addAttribute("useComment", "true");
+		    model.addAttribute("useComment", "true"); 
 		}
 		
 		//SHT-CUSTOMIZING//if (bbsSatisfactionService.canUseSatisfaction(boardVO.getBbsId())) {
