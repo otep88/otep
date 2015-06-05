@@ -5,4 +5,11 @@
 <sqlMapConfig>
 	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSMaster_SQL_Mysql.xml"/>	
 	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBoard_SQL_Mysql.xml"/>
-</sqlMapConfig>
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSLoneMaster_SQL_Mysql.xml"/>
+	
+	<!-- 2009.06.26 : 2단계 기능 추가 (댓글관리, 만족도조사) -->
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSAddedOptions_SQL_Mysql.xml"/>
+	
+	
+	
+<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSUse_SQL_Mysql.xml"></sqlMap></sqlMapConfig>

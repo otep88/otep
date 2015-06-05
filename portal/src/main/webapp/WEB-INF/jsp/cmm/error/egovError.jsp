@@ -41,6 +41,7 @@ function fncGoAfterErrorPage(){
                   <tr>
                     <td width="74" rowspan="2" align="center"><img src="<c:url value='/images/egovframework/com/cmm/danger.jpg' />" width="74" height="74" alt="danger" /></td>
                     <td width="399" align="left" class="lt_text2">알 수 없는 오류가 발생했습니다.</td>
+                    <td>${exception.message}</td>
                   </tr>
                 </table>
                   <table width="500" border="0" cellspacing="2" cellpadding="2">
@@ -62,5 +63,9 @@ function fncGoAfterErrorPage(){
     </td>
   </tr>
 </table>
+<%
+          Throwable ex = (Throwable)request.getAttribute("exception");
+          ex.printStackTrace();
+%>
 </body>
 </html>

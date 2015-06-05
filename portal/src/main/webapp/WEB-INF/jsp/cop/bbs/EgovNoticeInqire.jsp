@@ -70,7 +70,7 @@
 </script>
 <!-- 2009.06.29 : 2단계 기능 추가  -->
 <c:if test="${useComment == 'true'}">
-<c:import url="/cop/bbs/selectCommentList.do" charEncoding="utf-8">
+<c:import url="/cop/cmt/selectCommentList.do" charEncoding="utf-8">
 	<c:param name="type" value="head" />
 </c:import>
 </c:if>
@@ -232,8 +232,21 @@
             <!-- 목록/저장버튼  끝-->
             
             </form>
+            <!-- 2009.06.29 : 2단계 기능 추가  -->
+	<c:if test="${useComment == 'true'}">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td height="10"></td>
+	  </tr>
+	</table>
+
+	<c:import url="/cop/cmt${prefix}/selectCommentList.do" charEncoding="utf-8">
+		<c:param name="type" value="body" />
+	</c:import>
+	</c:if>
 
             </div><!-- contents end -->
+            
         </div>
     </div>
     <!-- footer 시작 -->

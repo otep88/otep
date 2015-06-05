@@ -3,6 +3,12 @@
     "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
 
 <sqlMapConfig>
-	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSMaster_SQL_Cubrid.xml"/>
-	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBoard_SQL_Cubrid.xml"/>			
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSMaster_SQL_Cubrid.xml"/>	
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBoard_SQL_Cubrid.xml"/>
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSLoneMaster_SQL_Cubrid.xml"/>
+	
+	<!-- 2009.06.26 : 2단계 기능 추가 (댓글관리, 만족도조사) -->
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSAddedOptions_SQL_Cubrid.xml"/>
+
+	<sqlMap resource="egovframework/sqlmap/let/cop/bbs/EgovBBSUse_SQL_Cubrid.xml"/>
 </sqlMapConfig>

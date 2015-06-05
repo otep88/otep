@@ -47,6 +47,7 @@
        
         -->
     <egov-security:secured-object-config id="securedObjectConfig"
+       sqlRolesAndUrl="SELECT a.ROLE_PTTRN url, b.AUTHOR_CODE authority FROM LETTNROLEINFO a, LETTNAUTHORROLERELATE b  WHERE a.ROLE_CODE = b.ROLE_CODE AND a.ROLE_TY = 'url'  ORDER BY a.ROLE_SORT"
        sqlRolesAndMethod="SELECT a.ROLE_PTTRN &quot;method&quot;, b.AUTHOR_CODE authority FROM LETTNROLEINFO a, LETTNAUTHORROLERELATE b WHERE a.ROLE_CODE = b.ROLE_CODE AND a.ROLE_TY = 'method'  ORDER BY a.ROLE_SORT"
        sqlRolesAndPointcut="SELECT a.ROLE_PTTRN pointcut, b.AUTHOR_CODE authority FROM LETTNROLEINFO a, LETTNAUTHORROLERELATE b WHERE a.ROLE_CODE = b.ROLE_CODE AND a.ROLE_TY = 'pointcut'  ORDER BY a.ROLE_SORT"
 

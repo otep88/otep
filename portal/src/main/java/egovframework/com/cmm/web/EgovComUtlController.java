@@ -42,6 +42,7 @@ public class EgovComUtlController {
 			@RequestParam(value="menuNo", required=false) String menuNo){
 		String link = linkPage;
 		// service 사용하여 리턴할 결과값 처리하는 부분은 생략하고 단순 페이지 링크만 처리함
+		
 		if (linkPage==null || linkPage.equals("")){
 			link="cmm/egovError";
 		}else{
@@ -53,6 +54,7 @@ public class EgovComUtlController {
 		if (menuNo!=null && !menuNo.equals("")){
 			session.setAttribute("menuNo",menuNo);
 		}
+		
 		return link;
 	}
 

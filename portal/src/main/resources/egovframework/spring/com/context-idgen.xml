@@ -718,6 +718,18 @@
         class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
         <property name="cipers" value="20" />
     </bean> 
+    
+    <!-- 답글 ANSWER_NO 생성 -->
+	<bean name="egovAnswerNoGnrService" class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrService" destroy-method="destroy">
+		<property name="dataSource" ref="egov.dataSource" />
+		<property name="strategy"   ref="answerNoStrategy" />
+		<property name="blockSize"  value="10"/>
+		<property name="table"	   	value="COMTECOPSEQ"/>
+		<property name="tableName"	value="ANSWER_NO"/>
+	</bean>
+	<bean name="answerNoStrategy" class="egovframework.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
+		<property name="cipers"   value="20" />
+	</bean>	
         
     <bean name="egovClbIdGnrService"
         class="egovframework.rte.fdl.idgnr.impl.EgovTableIdGnrService"
