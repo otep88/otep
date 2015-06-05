@@ -262,9 +262,6 @@ public class EgovBBSManageController {
 		    model.addAttribute("useComment", "true");
 		}
 		
-		//황은주 추가
-		//댓글 보려고 강제로 넣음
-		model.addAttribute("useComment", "true");
 		//SHT-CUSTOMIZING//if (bbsSatisfactionService.canUseSatisfaction(boardVO.getBbsId())) {
 		//SHT-CUSTOMIZING//    model.addAttribute("useSatisfaction", "true");
 		//SHT-CUSTOMIZING//}
