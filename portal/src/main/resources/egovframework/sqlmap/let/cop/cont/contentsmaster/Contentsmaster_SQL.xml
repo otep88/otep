@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Contentsmaster">
+	
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="contentsmasterSerarchVO" type="egovframework.let.cop.cont.service.ContentsmasterDefaultVO"/>
+	
+	<resultMap id="contentsmaster" class="egovframework.let.cop.cont.service.ContentsmasterVO">
+		<result property="contentsId" column="CONTENTS_ID" columnIndex="1"/>
+		<result property="contentsNm" column="CONTENTS_NM" columnIndex="2"/>
+		<result property="contentsIntrcn" column="CONTENTS_INTRCN" columnIndex="3"/>
+		<result property="contentsTyCode" column="CONTENTS_TY_CODE" columnIndex="4"/>
+		<result property="useAt" column="USE_AT" columnIndex="5"/>
+		<result property="tmplatId" column="TMPLAT_ID" columnIndex="6"/>
+		<result property="frstRegisterId" column="FRST_REGISTER_ID" columnIndex="7"/>
+		<result property="frstRegistPnttm" column="FRST_REGIST_PNTTM" columnIndex="8"/>
+		<result property="lastUpdusrId" column="LAST_UPDUSR_ID" columnIndex="9"/>
+		<result property="lastUpdtPnttm" column="LAST_UPDT_PNTTM" columnIndex="10"/>
+	</resultMap>
+	
+	<insert id="contentsmasterDAO.insertContentsmaster_S">
+		<![CDATA[
+			INSERT INTO CONTENTSMASTER 
+				( CONTENTS_ID
+				  , CONTENTS_NM
+				  , CONTENTS_INTRCN
+				  , CONTENTS_TY_CODE
+				  , USE_AT
+				  , TMPLAT_ID
+				  , FRST_REGISTER_ID
+				  , FRST_REGIST_PNTTM
+				  , LAST_UPDUSR_ID
+				  , LAST_UPDT_PNTTM )
+			VALUES ( #contentsId#
+				  , #contentsNm#
+				  , #contentsIntrcn#
+				  , #contentsTyCode#
+				  , #useAt#
+				  , #tmplatId#
+				  , #frstRegisterId#
+				  , #frstRegistPnttm#
+				  , #lastUpdusrId#
+				  , #lastUpdtPnttm# )
+		]]>
+	</insert>
+	
+	<update id="contentsmasterDAO.updateContentsmaster_S">
+		<![CDATA[
+			UPDATE CONTENTSMASTER
+			SET CONTENTS_ID=#contentsId#
+				, CONTENTS_NM=#contentsNm#
+				, CONTENTS_INTRCN=#contentsIntrcn#
+				, CONTENTS_TY_CODE=#contentsTyCode#
+				, USE_AT=#useAt#
+				, TMPLAT_ID=#tmplatId#
+				, FRST_REGISTER_ID=#frstRegisterId#
+				, FRST_REGIST_PNTTM=#frstRegistPnttm#
+				, LAST_UPDUSR_ID=#lastUpdusrId#
+				, LAST_UPDT_PNTTM=#lastUpdtPnttm#
+						WHERE CONTENTS_ID=#contentsId#
+				]]>
+	</update>
+	
+	<delete id="contentsmasterDAO.deleteContentsmaster_S">
+		<![CDATA[
+			DELETE FROM CONTENTSMASTER 
+						WHERE CONTENTS_ID=#contentsId#
+				]]>
+	</delete>
+	
+	<select id="contentsmasterDAO.selectContentsmaster_S" resultMap="contentsmaster">
+		<![CDATA[
+			SELECT
+				CONTENTS_ID
+				, CONTENTS_NM
+				, CONTENTS_INTRCN
+				, CONTENTS_TY_CODE
+				, USE_AT
+				, TMPLAT_ID
+				, FRST_REGISTER_ID
+				, FRST_REGIST_PNTTM
+				, LAST_UPDUSR_ID
+				, LAST_UPDT_PNTTM
+			FROM CONTENTSMASTER
+						WHERE CONTENTS_ID=#contentsId#
+				]]>
+	</select>
+	
+	<select id="contentsmasterDAO.selectContentsmasterList_D" parameterClass="contentsmasterSerarchVO" resultClass="egovMap">
+SELECT * FROM (
+	SELECT A.*, ROWNUM RNUM FROM (
+				SELECT
+								CONTENTS_ID
+								, CONTENTS_NM
+								, CONTENTS_INTRCN
+								, CONTENTS_TY_CODE
+								, USE_AT
+								, TMPLAT_ID
+								, FRST_REGISTER_ID
+								, FRST_REGIST_PNTTM
+								, LAST_UPDUSR_ID
+								, LAST_UPDT_PNTTM
+						FROM CONTENTSMASTER
+				WHERE 1=1
+				<isEqual prepend="AND" property="searchCondition" compareValue="0">
+					CONTENTS_ID = #searchKeyword#
+				</isEqual>
+				<isEqual prepend="AND" property="searchCondition" compareValue="1">
+					CONTENTS_NM LIKE '%' || #searchKeyword# || '%'
+				</isEqual>
+					ORDER BY 
+						CONTENTS_ID DESC
+		
+		<![CDATA[					
+	) A WHERE ROWNUM <= #lastIndex#
+)WHERE RNUM > #firstIndex#
+]]>
+	</select>	
+	<select id="contentsmasterDAO.selectContentsmasterListTotCnt_S" parameterClass="contentsmasterSerarchVO" resultClass="int">
+			SELECT COUNT(*) totcnt
+			FROM CONTENTSMASTER
+			WHERE 1=1
+			<isEqual prepend="AND" property="searchCondition" compareValue="0">
+				CONTENTS_ID = #searchKeyword#
+			</isEqual>
+			<isEqual prepend="AND" property="searchCondition" compareValue="1">
+				CONTENTS_NM LIKE '%' || #searchKeyword# || '%'
+			</isEqual>
+	</select>
+
+</sqlMap>
